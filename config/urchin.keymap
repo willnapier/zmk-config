@@ -5,7 +5,7 @@
 #include "zmk-helpers/key-labels/34.h"
 
 /* Urchin only has 2 two thumb keys */ 
-#define THUMBS LH1 LH0 RH0 RH1
+/* #define THUMBS LH1 LH0 RH0 RH1 probably not needed as already in base.keymap */
 
 /* source the main keymap */
 #include "base.keymap"
