@@ -26,6 +26,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: duckyb  # Add the new remote
+      url-base: https://github.com/duckyb
 
   projects:
     - name: zmk-helpers
@@ -37,6 +39,12 @@ manifest:
     - name: zmk-tri-state
       revision: main
       path: modules/tri-state
+
+    # Reference the duckyb/urchin repository
+    - name: urchin
+      remote: duckyb
+      revision: master
+      path: modules/urchin  # You can adjust this path based on where you want it in your workspace
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
