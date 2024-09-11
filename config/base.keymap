@@ -11,7 +11,6 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 #include "zmk-helpers/unicode-chars/german.dtsi"
-#include "zmk-helpers/unicode-chars/currency.dtsi" // 20240911 added for gbp sign
 
 #define DEF 0
 #define NAV 1
@@ -131,9 +130,9 @@ ZMK_TRI_STATE(smart_mouse,
 
 /* Custom behaviors */
 
-// Alt+Tab swapper, requires PR #1366
+// Cmd+Tab swapper, requires PR #1366
 ZMK_TRI_STATE(swapper,
-    bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+    bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
     ignored-key-positions = <LT2>;
 )
 
@@ -215,11 +214,11 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
 
 ZMK_LAYER(base,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     &kp Q         &kp W         &kp F         &lt MOUSE P         &kp B              &kp J        &kp L         &kp U         &kp Y         &kp SQT      
+        &kp Q         &kp W        &kp F       &lt MOUSE P     &kp B           &kp J        &kp L         &kp U         &kp Y         &kp SQT      
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &hml LCTRL A   &hml LALT R   &hml LGUI S  &hml LSHFT T  &kp G              &kp M     &hmr RSHFT N   &hmr LGUI E   &hmr LALT I   &hmr LCTRL O  
+     &hml LCTRL A  &hml LALT R   &hml LGUI S  &hml LSHFT T     &kp G            &kp M      &hmr RSHFT N &hmr LGUI E   &hmr LALT I   &hmr LCTRL O  
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-     &kp Z         &kp X         &kp C         &kp D         &kp V              &kp K        &kp H       &comma_morph  &dot_morph    &qexcl       
+       &kp Z         &kp X         &kp C         &kp D         &kp V            &kp K        &kp H       &comma_morph  &dot_morph    &qexcl       
 // ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
                                                SMART_NUM     &smart_shft    &lt_spc NAV 0  &lt FN RET                                      
 //                                           ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
