@@ -41,9 +41,9 @@ manifest:
       path: modules/tri-state
 
     # Reference the duckyb/urchin repository
-    - name: urchin
+    - name: urchin-zmk-module
       remote: duckyb
-      revision: master
+      revision: main
       path: modules/urchin  # You can adjust this path based on where you want it in your workspace
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
@@ -57,3 +57,4 @@ manifest:
 
   self:
     path: config
+    
