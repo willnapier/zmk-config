@@ -13,8 +13,8 @@
 #define COMBO_IDLE_FAST 150
 #define COMBO_IDLE_SLOW 50
 
-#define HRC_TAB    &hml LG(LSHFT) TAB  // Hold for Left Cmd + Left Shift, tap for TAB
-#define HRC_REPEAT &hml_repeat LG(LALT) REPEAT  // Hold for Left Cmd + Left Alt, tap for REPEAT
+#define HRC_TAB    &hml         LGUI(LSHFT) TAB  // Left Cmd + Left Shift, tap for TAB
+#define HRC_REPEAT &hml_repeat  LGUI(LALT) REPEAT  // Left Cmd + Left Alt, tap for REPEAT
 #define HRC_LPAR   &hmr_lpar_lt RS(LGUI) 0
 #define HRC_RPAR   &hmr_rpar_gt LG(LALT) 0
 
