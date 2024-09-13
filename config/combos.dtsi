@@ -15,8 +15,8 @@ Jxzcz  │ LM4 LM3 LM2 LM1 LM0 │ │ RM0 RM1 RM2 RM3 RM4 │
 
 // Home row mods with tap/hold for left-hand side
 // These ensure that you can chord Left GUI (Cmd) + Left Shift or Left Alt with another key
-#define HRC_TAB    &hml         LGUI(LSHFT) TAB  // Hold for Left Cmd + Left Shift, tap for TAB
-#define HRC_REPEAT &hml_repeat  LGUI(LALT) REPEAT  // Hold for Left Cmd + Left Alt, tap for REPEAT
+#define HRC_TAB    &hml LGUI(LSHFT) TAB  // Hold for Left Cmd + Left Shift, tap for TAB
+#define HRC_REPEAT &hml_repeat LGUI(LALT) REPEAT  // Hold for Left Cmd + Left Alt, tap for REPEAT
 #define HRC_LPAR   &hmr_lpar_lt RSHFT(LGUI) 0
 #define HRC_RPAR   &hmr_rpar_gt LGUI(LALT) 0
 
@@ -25,8 +25,8 @@ ZMK_COMBO(esc,   &kp ESC,       LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO
 ZMK_COMBO(ret,   &kp RETURN,    LT2 LT1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(mouse, &smart_mouse,  LT3 LT1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(tab,    HRC_REPEAT, LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(repeat, HRC_TAB,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(tab,    HRC_TAB,    LM2 LM1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(repeat, HRC_REPEAT, LM3 LM2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(cut,   &kp LG(X),   LB3 LB1,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,  &kp LG(C),   LB3 LB2,     DEF NAV NUM, COMBO_TERM_FAST, COMBO_IDLE_FAST)
